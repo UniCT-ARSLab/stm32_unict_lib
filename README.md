@@ -5,8 +5,9 @@ Creating an STM32 Project with PlatformIO
 3. Insert project name
 4. As "Board" select "ST NUCLEO F401RE"
 5. As "Framework" select CMSIS
-6. After project creation copy the dir "stm32_unict_lib" into the "lib" directory
-7. Add "ClockConfig()" as the first procedure call in the main() function
+6. After project creation, open the "platform.ini" file and add the following line:
+	lib_deps = https://github.com/UniCT-ARSLab/stm32_unict_lib.git
+7. Create, in the "src" dir, a main file and add "ClockConfig()" as the first procedure call in the main() function
    (this sets the CPU clock at 84 MHz)
 8. Have fun...
 
